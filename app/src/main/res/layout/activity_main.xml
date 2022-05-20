@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="55dp"
+        android:alpha="0.3"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     //로그인 글자 표현
     <TextView
         android:layout_width="wrap_content"
@@ -106,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
 
-
+    //비밀번호 찾기
     <Button
         android:id="@+id/btnGoFindPwActivity"
         android:layout_width="90dp"
