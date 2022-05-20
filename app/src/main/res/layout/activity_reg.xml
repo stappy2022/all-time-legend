@@ -6,26 +6,142 @@
     android:layout_height="match_parent"
     tools:context=".RegActivity">
 
-    //회원가입 페이지 글자 표현(상관 없)
+    <!--TextView:글씨크기 20sp, 굵게, app:layout는 텍스트 위치-->
+
+    <!--Radio그룹을 사용하여 동의와 비동의 둘 중 하나만 고를 수 있게 함-->
+
+    <!--EditText:성별을 적을 수 있는 텍스트, android:ems=10은 글자 개수, inputType은 성별을 쓸 수 있도록
+    textShortMessage로 함. android:layout, app:layout는 텍스트 위치-->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입 페이지"
-        app:layout_constraintBottom_toTopOf="@+id/btnClose"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="50dp"
+        android:text="개인정보 약관"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.116" />
 
-    //다시 main 페이지로 넘어가는 버튼
-    <Button
-        android:id="@+id/btnClose"
+    <EditText
+        android:id="@+id/join_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go Back"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="416dp"
+        android:ems="10"
+        android:hint="성별"
+        android:inputType="textShortMessage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/join_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="지역"
+        android:inputType="textLongMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_age"
+        app:layout_constraintVertical_bias="0.068"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnGoReg1Activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_theme_version"
+        android:text="다음"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClose1"
+        app:layout_constraintTop_toBottomOf="@+id/join_area" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/join_gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="동의"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="비동의"></RadioButton>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnClose1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_theme_version"
+        android:text="이전"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoReg1Activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_area" />
+
+    <EditText
+        android:id="@+id/join_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="나이"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_gender"
+        app:layout_constraintVertical_bias="0.042"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!--EditText:나이를 적을 수 있는 텍스트, android:ems=10은 글자 개수, inputType은 나이만 적을 수 있도록
+    number로 함. android:layout, app:layout은 텍스트 위치-->
+
+    <!--EditText:지역을 적을 수 있는 텍스트, android:ems=10은 글자 개수, inputType은 지역을 적을 수 있도록
+    textLongMessage로 함. android:layout, app:layout는 텍스트 위치-->
+
+    <!--회원가입을 취소하기 위한 버튼-->
+
+    <!--회원가입 버튼-->
+
+
+    //다시 main 페이지로 넘어가는 버튼
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

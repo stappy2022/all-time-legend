@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Reg1Activity"
+            android:exported="false" />
+        <activity
             android:name=".FindPwActivity"
             android:exported="false" />
         <activity
