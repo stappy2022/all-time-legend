@@ -6,15 +6,164 @@
     android:layout_height="match_parent"
     tools:context=".Reg1Activity">
 
-    //다시 main 페이지로 넘어가는 버튼
-    <Button
-        android:id="@+id/btnClose"
+<!--닉네임 입력 창 생성-->
+    <EditText
+        android:id="@+id/textVw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go Back"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="15dp"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:hint="닉네임"
+        app:layout_constraintBottom_toTopOf="@+id/join_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tView" />
+
+<!--아이디 입력 창 생성-->
+    <EditText
+        android:id="@+id/join_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="15dp"
+        android:ems="12"
+        android:hint="아이디"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVw" />
+
+<!--    중복 아이디 확인 버튼-->
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/button_theme_version"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toEndOf="@+id/join_id"
+        app:layout_constraintTop_toBottomOf="@+id/tView" />
+
+<!--    비밀번호 확인 입력 창 생성-->
+    <EditText
+        android:id="@+id/join_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="15dp"
+        android:ems="15"
+        android:inputType="textPassword"
+        android:hint="비밀번호 확인"
+        app:layout_constraintBottom_toTopOf="@+id/join_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+<!--    비밀번호 입력 창 생성-->
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="15dp"
+        android:ems="15"
+        android:inputType="textPassword"
+        android:hint="비밀번호"
+        app:layout_constraintBottom_toTopOf="@+id/join_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_id" />
+
+<!--    이메일 입력 창 생성-->
+    <EditText
+        android:id="@+id/join_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="70dp"
+        android:ems="15"
+        android:hint="이메일"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_password" />
+
+<!--    개인정보 모두 입력시 회원가입 성공과 동시에 Main 로그인 페이지로 이동하는 버튼-->
+    <Button
+        android:id="@+id/btnGoMainActivity1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="102dp"
+        android:background="@drawable/button_theme_version"
+        android:text="다음"
+        android:textColor="@color/white"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toEndOf="@+id/btnClose2"
+        app:layout_constraintTop_toBottomOf="@+id/join_email" />
+
+<!--    개인정보 약관 페이지로 이동 버튼(바로 이전 페이지로 이동)-->
+    <Button
+        android:id="@+id/btnClose2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="102dp"
+        android:background="@drawable/button_theme_version"
+        android:text="취소"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoMainActivity1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/join_email" />
+
+<!--    이용약관 입력 창-->
+    <TextView
+        android:id="@+id/tView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="30dp"
+        android:ems="20"
+        android:text="이용약관"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textVw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    기본적인 틀과 데이터베이스 수립 후 구글 연동 로그인 생성하여야함!!-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

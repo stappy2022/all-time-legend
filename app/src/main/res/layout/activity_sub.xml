@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SubActivity">
 
-    //다시 main 페이지로 넘어가는 버튼
+<!--    다시 main 페이지로 넘어가는 버튼-->
     <Button
         android:id="@+id/btnClose"
         android:layout_width="wrap_content"

@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="NoColor">#00ff0000</color>
-
+<!--APP PROJECT 테마 색깔-->
     <color name="ThemeColor">#000AFF</color>
     <color name="PointColor">#C6E2FF</color>
 

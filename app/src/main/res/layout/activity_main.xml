@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+<!--  로플리 로고 이미지 -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    //로그인 글자 표현
+<!--    로그인 글자 표현-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    //아이디 입력
+<!--    아이디 입력 창-->
     <EditText
         android:id="@+id/edit_id"
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    //비밀번호 입력
+<!--    비밀번호 입력 창-->
     <EditText
         android:id="@+id/edit_pw"
         android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_id" />
 
-    //아이디 저장 버튼
+<!--    아이디 저장 버튼 (임시적으로 버튼 생성, 추후 체크박스로 할 예정-->
     <Button
         android:id="@+id/button2"
         android:layout_width="80dp"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_pw"
         app:layout_constraintVertical_bias="0.0" />
 
-    //자동 로그인
+<!--    자동 로그인 버튼 (임시적으로 버튼 생성, 추후 체크박스로 할 예정-->
     <Button
         android:id="@+id/button"
         android:layout_width="80dp"
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_pw"
         app:layout_constraintVertical_bias="0.0" />
 
-    //SubActivity로 가는 버튼(상관 없)
+<!--    SubActivity로 가는 버튼(상관 없음, 지울 예정)-->
     <Button
         android:id="@+id/btnGoSubActivity"
         android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    //로그인 버튼
+<!--    로그인 버튼-->
     <Button
         android:id="@+id/btnGoLogActivity"
         android:layout_width="300dp"
@@ -121,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
 
-    //비밀번호 찾기
+<!--    비밀번호 찾기 페이지로 넘어가는 버튼-->
     <Button
         android:id="@+id/btnGoFindPwActivity"
         android:layout_width="90dp"
@@ -131,11 +131,13 @@
         android:layout_marginBottom="160dp"
         android:background="@drawable/round_button"
         android:text="비밀번호\n찾기"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
+<!--    회원가입 페이지로 넘어가는 버튼-->
     <Button
         android:id="@+id/btnGoRegActivity"
         android:layout_width="90dp"
@@ -144,11 +146,13 @@
         android:layout_marginBottom="160dp"
         android:background="@drawable/round_button"
         android:text="회원가입"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent" />
 
+<!--    아이디 찾기 페이지로 넘어가는 버튼-->
     <Button
         android:id="@+id/btnGoFindIdActivity"
         android:layout_width="90dp"
@@ -157,6 +161,7 @@
         android:layout_marginBottom="160dp"
         android:background="@drawable/round_button"
         android:text="아이디\n찾기"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.174"
